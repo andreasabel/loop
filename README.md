@@ -5,6 +5,8 @@ recursive functions on the natural numbers.
 
 See https://en.wikipedia.org/wiki/LOOP_(programming_language).
 
+## Syntax
+
 The grammar (in LBNF notation) is in file [LoopLang.cf](LoopLang.cf).
 
 An example (Eucledian division) is in file [div.loop](test/div.loop),
@@ -43,6 +45,8 @@ end
 return q
 ```
 
+## Semantics
+
 All variables are initially set to 0
 and can later only set to the value of another
 variable plus/minus a constant via the assignment statement.
@@ -66,4 +70,4 @@ For installation including dependencies, type the following in the project root 
 ```
 cabal install alex happy BNFC
 make
-``
+```
