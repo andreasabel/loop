@@ -1,0 +1,13 @@
+-- Uwe Schöning's LOOP language for primitive recursion
+
+Prg.   Program ::= [Stm] "return" Ident ;
+
+SOp.   Stm ::= Ident ":=" Ident Op Integer ;
+SLoop. Stm ::= "loop" Ident "do" [Stm] "end" ;
+
+terminator Stm "" ;
+
+OPlus.  Op ::= "+" ;
+OMinus. Op ::= "-" ;
+
+comment "--";

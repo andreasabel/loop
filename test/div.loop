@@ -1,0 +1,36 @@
+-- Computes q := n `div` m by iteration on n.
+
+-- We compute also the remainder, but cannot output it,
+-- due to the restrictions of the LOOP language.
+
+n    := n + 641
+m    := m + 80
+
+-- The counter c counts down from m.
+-- At c==0, we found one copy of m in n.
+
+c    := m + 0
+
+loop n do
+  c := c - 1
+  r := r + 1
+
+  -- The usual trick to do boolean operations:
+  -- yes := (c == 0)
+
+  yes := zero + 1
+  loop c do
+    yes := zero + 0
+  end
+
+  -- If c == 0, one iteration is finished.
+  -- We increase q and reset the counter c and the remainder r.
+
+  loop yes do
+    q := q    + 1
+    r := zero + 0
+    c := m    + 0
+  end
+end
+
+return q

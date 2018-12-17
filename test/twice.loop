@@ -1,0 +1,11 @@
+-- Double the value of n.
+
+n := zero + 123
+
+loop n do
+  n := n + 1
+end
+
+return n
+
+-- Should output 246
