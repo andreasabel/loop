@@ -1,4 +1,4 @@
--- | Lab 2: type checker and interpreter for C--.
+-- | Interpreter for Uwe Schöning's LOOP language.
 
 import System.Environment (getArgs)
 import System.Exit        (exitFailure)
@@ -10,7 +10,7 @@ import LoopLang.ErrM      (Err(Ok,Bad))
 import Interpreter        (interpret)
 
 -- | Main: read file passed by only command line argument,
---   parse as C-- code, type check, and interpret.
+--   parse as LOOP code and interpret.
 
 main :: IO ()
 main = do
@@ -21,7 +21,7 @@ main = do
       putStrLn "Usage: loop <SourceFile>"
       exitFailure
 
--- | Parse, file contents as C-- program.
+-- | Parse file contents as LOOP program.
 
 parse :: String -> IO Program
 parse s = do
